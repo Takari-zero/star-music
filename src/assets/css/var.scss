@@ -1,0 +1,85 @@
+// 背景色
+$bg-color: #fff;
+$bg-grey-color: #f2f2f2;
+
+//边框色
+$border-color: #e5e5e5;
+
+//文字颜色
+$text-color: #000;
+$text-gray-color: #666;
+
+//字体大小
+$text-size: 14px;
+$text-small-size: 12px;
+$text-big-size: 16px;
+$text-big1-size: 20px;
+$text-big2-size: 25px;
+$top-herder-icon: 33px;
+
+//间距
+$s-gap: 12px;
+$gap: 20px;
+$big-gap: 40px;
+
+//内容宽度
+$normal-width: 1024px;
+$plus-width: 1400px;
+
+//图片大小
+$mini-img-size: 35px;
+$small-img-size: 60px;
+$mid-img-size: 150px;
+$big-img-size: 250px;
+
+// 链接样式
+@mixin link($bottom: 2) {
+  color: $text-gray-color;
+  text-decoration: none;
+  // padding-bottom: 10px;
+  // border-bottom: 1px solid transparent;
+  position: relative;
+  cursor: pointer;
+
+  &::after {
+    content: '';
+    position: absolute;
+    border-bottom: 1px solid transparent;
+    width: 100%;
+    bottom: -#{$bottom}px;
+    left: 0;
+  }
+
+  &:hover,
+  &.active {
+    color: $text-color;
+
+    &::after {
+      border-bottom-color: $text-color;
+    }
+  }
+}
+
+// 图片宽高
+@mixin wh($width: $mid-img-size, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+//文字超出 省略号
+@mixin ell($line: 1) {
+  @if $line ==1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  } @else {
+    display: -webkit-box;
+    /* 作为弹性伸缩盒子模型显示 */
+    -webkit-box-orient: vertical;
+    /* 垂直排列子元素 */
+    -webkit-line-clamp: $line;
+    /* 限制在3行 */
+    overflow: hidden;
+    /* 确保溢出的内容会被隐藏 */
+  }
+}
