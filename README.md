@@ -59,7 +59,8 @@ npx NeteaseCloudMusicApi
 
 ## 截图
 
-![image](https://github.com/user-attachments/assets/568c9f54-4496-43c2-b714-15489869541c)
-![image](https://github.com/user-attachments/assets/1e536427-3ea7-470b-bae7-cf9d604b5fac)
-![image](https://github.com/user-attachments/assets/6c77d3db-1e31-4dc3-bc6e-b0a6c4692168)
-![image](https://github.com/user-attachments/assets/eff087e6-700e-4c05-a2a7-2edea3703047)
+![img](./screenshots/1.png)
+![img](./screenshots/2.png)
+![img](./screenshots/3.png)
+![img](./screenshots/4.png)
+![img](./screenshots/5.png)
