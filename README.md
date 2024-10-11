@@ -2,7 +2,7 @@
 
 ## 概述
 
-这是一款网页音乐播放器，旨在提供友好的界面和流畅的音乐播放体验，播放器提供丰富的播放控制功能。
+该网页播放器，使用的是网易云的 API 接口
 
 ### 基本播放控制
 
@@ -40,10 +40,26 @@
 
 这款网页音乐播放器通过简洁直观的界面设计和丰富的功能，为用户提供了极佳的音乐播放体验。无论是基本的播放控制，还是高级的歌词显示和播放列表管理，都能满足用户的多样化需求。
 
-## 使用时需要 npx NeteaseCloudMusicApi 以及 npm run serve
+## 使用须知
+
+**前端**：
+
+```shell
+git clone git@github.com:Takari-zero/star-star-music.git
+cd star-star-music
+npm i
+npm run serve
+```
+
+**后端**:
+
+```shell
+npx NeteaseCloudMusicApi
+```
 
 ## 截图
 
-![alt text](image.png)
-![alt text](image-1.png)
-![alt text](image-2.png)
+![image](https://github.com/user-attachments/assets/568c9f54-4496-43c2-b714-15489869541c)
+![image](https://github.com/user-attachments/assets/1e536427-3ea7-470b-bae7-cf9d604b5fac)
+![image](https://github.com/user-attachments/assets/6c77d3db-1e31-4dc3-bc6e-b0a6c4692168)
+![image](https://github.com/user-attachments/assets/eff087e6-700e-4c05-a2a7-2edea3703047)
