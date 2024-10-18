@@ -46,7 +46,7 @@
 
 ```shell
 git clone git@github.com:Takari-zero/star-music.git
-cd star-star-music
+cd star-music
 npm i
 npm run serve
 ```
