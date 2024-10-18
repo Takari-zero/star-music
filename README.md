@@ -45,7 +45,7 @@
 **前端**：
 
 ```shell
-git clone git@github.com:Takari-zero/star-star-music.git
+git clone git@github.com:Takari-zero/star-music.git
 cd star-star-music
 npm i
 npm run serve
