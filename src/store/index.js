@@ -90,7 +90,7 @@ const song = {
     },
     changePlayIndex(state, i) {
       state.nowPlaySongIndex = +i
-      setValueToLocalStorage('nowPlaySongIndex', state.nowPlaySongIndex) // ccccccccccccccc
+      setValueToLocalStorage('nowPlaySongIndex', state.nowPlaySongIndex) //
     },
     playOrPause(state, isPlay) {
       state.Playing = isPlay

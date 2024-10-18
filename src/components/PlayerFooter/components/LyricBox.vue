@@ -14,7 +14,13 @@
           <div class="albumName">专辑名：{{ TookItem?.album }}</div>
         </div>
         <div class="lyric">
-          <div v-for="(item, index) in TookItem?.lyric" :class="{ active: index === nowSongLyricIndex }" class="lyric-item" :key="item.time">
+          <div
+            v-for="(item, index) in TookItem?.lyric"
+            :class="{ active: index === nowSongLyricIndex }"
+            :id="index === nowSongLyricIndex ? 'activeLyric' : ''"
+            class="lyric-item"
+            :key="item.time"
+          >
             {{ item.text }}
           </div>
         </div>
@@ -27,15 +33,10 @@
 import { mapGetters } from 'vuex'
 export default {
   props: ['isShowLyric', 'songNowTime'],
-  data() {
-    return {
-      // nowSongLyricIndex: null,
-    }
-  },
   computed: {
     ...mapGetters('song', ['TookItem']),
     nowSongLyricIndex() {
-      if (this.TookItem?.lyric === []) {
+      if (this.TookItem?.lyric.length === 0) {
         return -1
       }
       for (let i = 0; i < this.TookItem?.lyric?.length; i++) {
@@ -44,6 +45,17 @@ export default {
         }
       }
       return -1
+    },
+  },
+  watch: {
+    nowSongLyricIndex() {
+      this.$nextTick(() => {
+        let activeLyric = document.querySelector('#activeLyric')
+        activeLyric.scrollIntoView({
+          behavior: 'smooth',
+          block: 'center',
+        })
+      })
     },
   },
 }

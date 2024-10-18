@@ -2,19 +2,16 @@
   <div class="MusicHomepage">
     <AppBanner />
     <RecommendPlayList />
-    <NewDisc />
   </div>
 </template>
 
 <script>
-import NewDisc from "./components/NewDisc.vue";
-import AppBanner from "./components/AppBanner.vue";
-import RecommendPlayList from "./components/RecommendPlayList.vue";
+import AppBanner from './components/AppBanner.vue'
+import RecommendPlayList from './components/RecommendPlayList.vue'
 export default {
-  name: "MusicHomepage",
-  components: { NewDisc, AppBanner, RecommendPlayList },
-};
+  name: 'MusicHomepage',
+  components: { AppBanner, RecommendPlayList },
+}
 </script>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>
